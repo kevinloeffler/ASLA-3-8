@@ -42,8 +42,8 @@ def load_data(from_csv: str) -> pd.DataFrame:
 
 
 if __name__ == '__main__':
-    model_type = 'roberta'
-    model_name = 'roberta-base'
+    model_type = 'bert'  # 'roberta'
+    model_name = 'domischwimmbeck/bert-base-german-cased-fine-tuned-ner'  # 'roberta-base'
 
     print('CUDA enabled:', torch.cuda.is_available())
 
@@ -54,7 +54,7 @@ if __name__ == '__main__':
     model_args.num_train_epochs = 30
     model_args.use_multiprocessing = True
     model_args.save_model_every_epoch = False
-    model_args.n_gpu = 2
+    model_args.n_gpu = 1
     model_args.best_model_dir = 'models/tf-1'
 
     model = NERModel(model_type, model_name, use_cuda=True, args=model_args)
