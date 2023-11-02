@@ -59,5 +59,5 @@ if __name__ == '__main__':
 
     model = NERModel(model_type, model_name, use_cuda=True, args=model_args)
 
-    data = load_data('per_loc_1.csv')
+    data = load_data('historic_data.csv')
     model.train_model(train_data=data, output_dir='models/', show_running_loss=True)
