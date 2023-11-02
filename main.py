@@ -57,7 +57,7 @@ if __name__ == '__main__':
     model_args.n_gpu = 1
     model_args.best_model_dir = 'models/tf-1'
 
-    model = NERModel(model_type, model_name, use_cuda=True, args=model_args)
+    model = NERModel(model_type, model_name, use_cuda=True, from_tf=True, args=model_args)
 
     data = load_data('historic_data.csv')
     model.train_model(train_data=data, output_dir='models/', show_running_loss=True)
