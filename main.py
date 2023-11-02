@@ -42,8 +42,8 @@ def load_data(from_csv: str) -> pd.DataFrame:
 
 
 if __name__ == '__main__':
-    model_type = 'bert'  # 'roberta'
-    model_name = 'domischwimmbeck/bert-base-german-cased-fine-tuned-ner'  # 'roberta-base'
+    model_type = 'albert'  # 'roberta'
+    model_name = 'abhilash1910/albert-german-ner'  # 'roberta-base'
 
     print('CUDA enabled:', torch.cuda.is_available())
 
